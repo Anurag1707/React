@@ -5,18 +5,18 @@ const Todo = () => {
   const [task, setTask] = useState("");
   let [index,SetIndex]=useState(null)
   const [todos, setTodos] = useState("")
-//   const [todos, setTodos] = useState(()=>{
-//     let data=  localStorage.getItem("key")
-//     if(data){
-//         return JSON.parse(data)
-//     }
-//     return []
+  const [todos, setTodos] = useState(()=>{
+    let data=  localStorage.getItem("key")
+    if(data){
+        return JSON.parse(data)
+    }
+    return []
 
-//   });
-//   useEffect(()=>{
-//     localStorage.setItem("key",JSON.stringify(todos))
+  });
+  useEffect(()=>{
+    localStorage.setItem("key",JSON.stringify(todos))
 
-//   },[todos])
+  },[todos])
 
 
 
