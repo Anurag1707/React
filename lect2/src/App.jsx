@@ -22,4 +22,20 @@ export default App
 //   )
 // }
 
+
+// import React from 'react'
+// import Header from './MyComponent/Header'
+// import Footer from './MyComponent/Footer'
+// import Todos from './MyComponent/Todos'
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Header/>
+//       <Footer/>
+//       <Todos/>
+//     </div>
+//   )
+// }
+
 // export default App
