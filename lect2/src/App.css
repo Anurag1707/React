@@ -127,5 +127,8 @@ button{
   background-color: rgb(240, 161, 161);
   border-radius: 5px;
   font-size: 15px;
+  cursor: pointer;
 }
+
+
 

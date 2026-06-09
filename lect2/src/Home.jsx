@@ -34,6 +34,19 @@ const Home = ({apiData,SetApiData,cart,SetCart}) => {
 
   },[])
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
   return (
     <div id='card'>
       {
