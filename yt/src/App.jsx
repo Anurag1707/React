@@ -67,8 +67,8 @@ const App = () => {
   return (
     <div>
       <h1> {Count} </h1>
-      {/* <button onClick={Count1}>Count ++</button>
-     <button onClick={Count2}>Count --</button> */}
+      <button onClick={Count1}>Count ++</button>
+     <button onClick={Count2}>Count --</button>
 
 
       <button onClick={()=>setCount(Count+1)}>Count ++</button>
