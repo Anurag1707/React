@@ -99,24 +99,85 @@
 // export default App
 
 
+
+// import './App.css'
+
+// import React from 'react'
+
+// const App = () => { 
+//   const submitHandle = (e) => {
+//     e.preventDefault() //isko lagne se reload na hokr text gyb nhi hota 
+//     console.log("heeeii");
+    
+//   }
+   
+//   return (
+//     <div>
+//       <form onSubmit={(e)=>{
+//         submitHandle(e)
+//       }} >
+//       {/* <form onSubmit={submitHandle}> */}
+//         <input
+//          className='px-3 py-3 mt-2 ml-5 bg-amber-100 text-xl border-2 rounded-4xl '
+//          type="text"
+//          placeholder='Enter your name' 
+//         />
+
+//         <button className='bg-cyan-400 px-3 py-2 font-semibold border-2 rounded-2xl m-3 '>Submit</button>
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// two way binding
 import './App.css'
 
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => { 
-  const submitHandle = () => {
-    console.log("heeeii");
+   const [username, setusername] = useState('')
+
+  const submitHandle = (e) => {
+    e.preventDefault() //isko lagne se reload na hokr text gyb nhi hota 
+    console.log(username);
+    setusername('')
     
   }
    
   return (
     <div>
-      <form onSubmit={submitHandle} >
-        <input className='px-3 py-3 mt-2 ml-5 bg-amber-100 text-xl border-2 rounded-4xl ' type="text" placeholder='Enter your name' />
-        <button className='bg-cyan-400 px-3 py-2 font-semibold border-2 rounded-2xl m-3 '>Submit</button>
+      <form onSubmit={(e)=>{
+        submitHandle(e)
+      }} >
+
+      {/* <form onSubmit={submitHandle}> */}
+        <input
+          value={username} // screen me pehle se dikhegaa
+         onChange={(e)=>{
+          setusername(e.target.value);
+         }}
+         
+         className='px-3 py-3 mt-2 ml-5 bg-amber-100 text-xl border-2 rounded-4xl '
+         type="text"
+         placeholder='Enter your name' 
+        />
+
+        <button 
+        className='bg-cyan-400 px-3 py-2 font-semibold border-2 rounded-2xl m-3 '
+        >Submit</button>
+
+        <h1>{username}</h1>
+
+        
       </form>
     </div>
   )
 }
 
 export default App
+
+
