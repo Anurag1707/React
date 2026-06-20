@@ -1,5 +1,5 @@
 // import React from 'react'
-import './App.css'
+// import './App.css'
 
 
 // // hooks - special type of functions
@@ -49,34 +49,72 @@ import './App.css'
 
 
 
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const App = () => {
+// const App = () => {
 
-  let [Count, setCount] = useState(0)
+//   let [Count, setCount] = useState(0)
 
- const Count1=()=>{
-  console.log("helloo");
+//  const Count1=()=>{
+//   console.log("helloo");
   
-    setCount(Count+1)
- }
+//     setCount(Count+1)
+//  }
 
- const Count2=()=>{
-  setCount(Count-1)
- }
+//  const Count2=()=>{
+//   setCount(Count-1)
+//  }
+//   return (
+//     <div>
+//       <h1> {Count} </h1>
+//       <button onClick={Count1}>Count ++</button>
+//      <button onClick={Count2}>Count --</button>
+     
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   let [name, setname] = useState("Anurag")
+
+//   function change(){
+//     console.log("hello");
+    
+//     setname("annnnn")
+//   }
+//   return (
+//     <>
+//       <h1 className='text-6xl bg-red-600'>{name}</h1>
+//       <button className='bg-blue-600 border-2 px-2 rounded-lg' onClick={change}>name change</button>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+import './App.css'
+
+import React from 'react'
+
+const App = () => { 
+  const submitHandle = () => {
+    console.log("heeeii");
+    
+  }
+   
   return (
     <div>
-      <h1> {Count} </h1>
-      <button onClick={Count1}>Count ++</button>
-     <button onClick={Count2}>Count --</button>
-     <button onClick={Count2}>Count --</button>
-     
-
-
-      <button onClick={()=>setCount(Count+1)}>Count ++</button>
-     <button onClick={()=>setCount(Count-1)}>Count --</button>
-
-
+      <form onSubmit={submitHandle} >
+        <input className='px-3 py-3 mt-2 ml-5 bg-amber-100 text-xl border-2 rounded-4xl ' type="text" placeholder='Enter your name' />
+        <button className='bg-cyan-400 px-3 py-2 font-semibold border-2 rounded-2xl m-3 '>Submit</button>
+      </form>
     </div>
   )
 }

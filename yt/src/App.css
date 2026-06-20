@@ -1,6 +1,18 @@
-button{
+@import "tailwindcss";
+
+
+/* button{
   background-color: lightblue;
   padding: 5px 10px;
   color: black;
   border-radius: 8px;
 }
+
+h1{
+  background-color: aqua;
+}
+
+body{
+  background-color: black;
+} */
+
