@@ -134,50 +134,72 @@
 
 
 // two way binding
-import './App.css'
+// import './App.css'
+
+// import React, { useState } from 'react'
+
+// const App = () => { 
+//    const [username, setusername] = useState('')
+
+//   const submitHandle = (e) => {
+//     e.preventDefault() //isko lagne se reload na hokr, text gyb nhi hota 
+//     console.log(username);
+//     setusername('')
+    
+//   }
+   
+//   return (
+//     <div>
+//       <form onSubmit={(e)=>{
+//         submitHandle(e)
+//       }} >
+
+//       {/* <form onSubmit={submitHandle}> */}
+//         <input
+//           value={username} // screen me pehle se dikhegaa
+//          onChange={(e)=>{
+//           setusername(e.target.value);
+//          }}
+         
+//          className='px-3 py-3 mt-2 ml-5 bg-amber-100 text-xl border-2 rounded-4xl '
+//          type="text"
+//          placeholder='Enter your name' 
+//         />
+
+//         <button 
+//         className='bg-cyan-400 px-3 py-2 font-semibold border-2 rounded-2xl m-3 '
+//         >Submit</button>
+
+//         <h1>{username}</h1>
+
+        
+//       </form>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
 
 import React, { useState } from 'react'
 
-const App = () => { 
-   const [username, setusername] = useState('')
+const App = () => {
+   const [name, setname] = useState("")
 
-  const submitHandle = (e) => {
-    e.preventDefault() //isko lagne se reload na hokr text gyb nhi hota 
-    console.log(username);
-    setusername('')
-    
+  const submitHandle =(e)=>{
+    // e.preventDefault()
+    console.log(name);
+    setname('')
   }
-   
   return (
     <div>
-      <form onSubmit={(e)=>{
-        submitHandle(e)
-      }} >
-
-      {/* <form onSubmit={submitHandle}> */}
-        <input
-          value={username} // screen me pehle se dikhegaa
-         onChange={(e)=>{
-          setusername(e.target.value);
-         }}
-         
-         className='px-3 py-3 mt-2 ml-5 bg-amber-100 text-xl border-2 rounded-4xl '
-         type="text"
-         placeholder='Enter your name' 
-        />
-
-        <button 
-        className='bg-cyan-400 px-3 py-2 font-semibold border-2 rounded-2xl m-3 '
-        >Submit</button>
-
-        <h1>{username}</h1>
-
-        
-      </form>
+      <input value={name} onChange={(e)=>{setname(e.target.value)}} type="text" placeholder='enter your naam' />
+      <button onClick={(e)=>{submitHandle(e)}}>Submit</button>
+      <h1></h1>
     </div>
   )
 }
 
 export default App
-
-
