@@ -198,7 +198,7 @@ const App = () => {
       <input value={name} onChange={(e)=>{setname(e.target.value)}} type="text" placeholder='enter your naam' />
       <button onClick={(e)=>{submitHandle(e)}}>Submit</button>
       <h1>{name}</h1>
-      <h1>ii</h1>
+      <h1>hii</h1>
       
       
       
